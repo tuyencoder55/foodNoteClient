@@ -26,6 +26,7 @@ export default function AddRestaurant() {
     try {
       await axios.post(`${API_URL}/api/restaurants`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
+        withCredentials: false,
       });
       navigate("/");
     } catch (err) {
